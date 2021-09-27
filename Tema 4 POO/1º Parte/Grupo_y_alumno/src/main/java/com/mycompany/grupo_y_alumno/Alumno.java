@@ -6,6 +6,7 @@
 package com.mycompany.grupo_y_alumno;
 
 import java.security.InvalidParameterException;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -16,6 +17,9 @@ public class Alumno {
     private int edad;
     private double nota;
 
+    public Alumno(){
+        
+    }
     public Alumno(String nombre, int edad, double nota) {
         setNombre(nombre);
         setEdad(edad);
@@ -71,10 +75,10 @@ public class Alumno {
     */
     @Override
     public String toString() {
-        return "--------------------------------------------" +
-               "\nNombre: " + nombre +
-               "\nEdad: " + edad + 
-               "\nNota: " + nota;
+        DecimalFormat df = new DecimalFormat("##.#");
+        return "\nNombre: " + this.nombre +
+               "\nEdad: " + this.edad + 
+               "\nNota: " + df.format(this.nota) + "\n";
     }
     
 }
