@@ -28,6 +28,6 @@ public class Ej1 extends Ejercicio{
 
             if(firstNumber > secondNumber) { TerminalInteraction.seeTextLn(firstNumber + " - " + secondNumber + " = " + (firstNumber-secondNumber)); }
             else { TerminalInteraction.seeTextLn(secondNumber + " - " + firstNumber + " = " + (secondNumber-firstNumber)); }
-        }while(!TerminalInteraction.getInput("¿Deseas salir del ejercicio? y/n",true).equals("y"));
+        }while(!TerminalInteraction.getInput("¿Deseas salir del ejercicio? y/n",true).equalsIgnoreCase("y"));
     }
 }
